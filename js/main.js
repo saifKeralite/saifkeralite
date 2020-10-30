@@ -6,8 +6,22 @@ var removeLimit = $(window).outerHeight() / 2,
         root: document.documentElement.body,
         rootMargin: '0px',
         threshold: 1.0
-    };
+    },
+    scrollTop = 0;
 
+//scrollTops
+var techSec = $('#tech-sec-set').offset().top;
+
+$('.nav-lnk').click(function (e) {
+    e.preventDefault();
+    var dataValue = $(this).data('link');
+    setTimeout(function () {
+        $(window).scrollTop($('#' + dataValue).offset().top - 270);
+        removeNavAnim();
+    }, 400);
+
+
+})
 
 //Global utilities
 function scrollDirection() {
@@ -21,7 +35,7 @@ function scrollDirection() {
     pos = $(window).scrollTop();
     return scrollDirection;
 
-};
+}
 
 function menuClick() {
     $('.more-icon').click(function (e) {
@@ -68,6 +82,35 @@ function mobileMenuClick() {
     })
 }
 
+function scrollTriggerFn() {
+    scrollTop = $(window).scrollTop();
+    $('.scroll-trigger').each(function (i, val) {
+        if (scrollTop >= $(this).offset().top - ((40 / 100) * $(this).offset().top)) {
+            $(this).addClass('triggered');
+
+        }
+
+
+
+    });
+
+}
+
+function smoothScroll() {
+
+
+    if ($(window).scrollTop() + $(window).height() > ($(document).height() - 150)) {
+
+    }
+    else {
+
+        $('.scrollsection').css({ 'margin-top': ($(window).scrollTop() / 10) * -1 })
+    }
+
+
+
+}
+
 
 $(window).on('load', function () {
     $('body').addClass('body-loaded');
@@ -81,6 +124,11 @@ $(document).ready(function () {
     $(window).scroll(function () {
         /* Removing the nav menu while scrolling down  */
         removeNavMenu(); //Only when scrolling down. Not on close menu click
+        //Scroll trigger 
+        scrollTriggerFn();
+        //SmoothScroll
+        smoothScroll();
+
     });
 
 
@@ -94,5 +142,6 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     removeNavMenu();//Only when scrolling down. Not on close menu click
+    scrollTriggerFn();
 })
 
