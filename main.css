@@ -6225,6 +6225,10 @@ h2.large-sm.center {
     .profile-image {
       -webkit-animation: none !important;
               animation: none !important;
+      -webkit-animation: fadein-a 0.2s ease-in 1s forwards !important;
+              animation: fadein-a 0.2s ease-in 1s forwards !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
       max-width: 51px; } }
   .profile-image img {
     max-height: 100%; }
