@@ -6223,6 +6223,10 @@ h2.large-sm.center {
       margin-left: 0; } }
   @media screen and (max-width: 375px) {
     .profile-image {
+      -webkit-animation: none !important;
+              animation: none !important;
+      -webkit-animation: fadein-a 0.2s ease-in 1s forwards !important;
+              animation: fadein-a 0.2s ease-in 1s forwards !important;
       margin-left: auto !important;
       margin-right: auto !important;
       max-width: 51px; } }
