@@ -6523,7 +6523,7 @@ h2.large-sm.center {
   display: inline-block;
   width: 12px;
   height: 22px;
-  background: url("../images/victory.png") no-repeat;
+  background: url("images/victory.png") no-repeat;
   top: 0;
   left: 0;
   z-index: 1;
@@ -6789,15 +6789,15 @@ p {
     height: 24px; }
 
 .twitter {
-  background: url("../images/twitter.png");
+  background: url("images/twitter.png");
   background-size: cover; }
 
 .github {
-  background: url("../images/github.png");
+  background: url("images/github.png");
   background-size: cover; }
 
 .linkedin {
-  background: url("../images/linkedin.png");
+  background: url("images/linkedin.png");
   background-size: cover;
   border-radius: 0; }
 
@@ -6949,7 +6949,7 @@ a.btn-small:hover {
       width: 20px;
       display: inline-block;
       height: 25px;
-      background: url("../images/building.png") no-repeat;
+      background: url("images/building.png") no-repeat;
       background-size: cover; }
       @media screen and (max-width: 768px) {
         .s-content .s-head:before {
@@ -6965,7 +6965,7 @@ a.btn-small:hover {
     .s-d-job-role .s-d-jr-each::before {
       content: "";
       display: inline-block;
-      background: url("../images/arrow.png") no-repeat;
+      background: url("images/arrow.png") no-repeat;
       background-size: cover;
       width: 9px;
       height: 9px;
@@ -7185,7 +7185,7 @@ a.btn-small:hover {
   display: inline-block;
   width: 22px;
   height: 15px;
-  background: url("../images/hand-pointer.png") no-repeat; }
+  background: url("images/hand-pointer.png") no-repeat; }
 
 .skill-block {
   width: calc(100% / 2);
